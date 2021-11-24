@@ -1,3 +1,5 @@
+import './style.css';
+
 const mainSection = document.getElementById('main-page');
 
 function createCard(actor) {
