@@ -1,7 +1,9 @@
 body {
-  background-color: blue;
+  background-color: white;
 }
 
-.card-image-container {
-  display: none;
+.main-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
