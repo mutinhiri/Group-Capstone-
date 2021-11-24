@@ -1,33 +1,31 @@
-const getDogs = async () => {
-  const apiUrl = 'https://dog.ceo/api/breed/labrador/images/random';
-  const response = await fetch(apiUrl, { method: 'GET' });
-  const dog = await response.json();
-
-  return dog.message;
-};
-const dogy = getDogs();
-const fillPopUp = () => {
-  const popUp = document.getElementById('modal');
-
-  popUp.innerHTML = `
-  
-  <img src="${dogy.message}" alt="">
-  <h2>Labrador</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nihil optio dolore quae debitis excepturi fuga impedit recusandae minima inventore!</p>
-  
-    `;
-};
-
-// const populateList = (dog) => {
-//   const section = document.getElementById('test');
-
-//   const button = document.getElementById('comment-btn');
-
-//   const newElement = document.createElement('img');
-
-//   newElement.src = dog;
-
-//   section.appendChild(newElement);
+// const getShows = async () => {
+//   const apiUrl = 'https://api.tvmaze.com/singlesearch/shows?q=seinfeld';
+//   const response = await fetch(apiUrl, { method: 'GET' });
+//   const show = await response.json();
+//   return show;
 // };
 
+const fillPopUp = (show, sum) => {
+  const popUp = document.getElementById('modal');
+  popUp.classList = 'modal';
+  popUp.style.display = 'block';
+
+  popUp.innerHTML = `
+  <a href="#" id="toogle">X</a>
+    <img src="${show}" alt="TV-show">
+    <p>${sum}</p>
+    `;
+  const toogle = document.getElementById('toogle');
+
+  toogle.addEventListener('click', () => {
+    popUp.style.display = 'none';
+  });
+};
+
+// button.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   getShows().then((show) => {
+//     fillPopUp(show.image.medium, show.summary);
+//   });
+// });
 export default fillPopUp;
