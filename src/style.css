@@ -1,5 +1,6 @@
 body {
   background-color: white;
+
   height: 800px;
 }
 
@@ -9,6 +10,7 @@ body {
   gap: 20px;
   margin-top: 50px;
 }
+
 
 #toogle {
   position: fixed;
