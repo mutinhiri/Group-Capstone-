@@ -1,6 +1,5 @@
 import './style.css';
-import test from './reservations';
-import { trying } from './reservations';
-test();
-// getShows();
+import reservationPopup from './reservations';
+import { displayPopup } from './reservations';
+reservationPopup();
 

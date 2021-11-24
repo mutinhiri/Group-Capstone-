@@ -1,4 +1,4 @@
-const test = () => {
+const reservationPopup = () => {
     const Btn = document.getElementById('btn');
     Btn.addEventListener('click', () => {
 
@@ -9,12 +9,12 @@ const test = () => {
           return show;
         };
         getShows().then((show) => {
-          trying(show.image.medium, show.rating.average);
+          displayPopup(show.image.medium, show.rating.average);
         });
     } 
     )};
 
-const trying = (image, info)  => {
+const displayPopup = (image, info)  => {
     const popupRes = document.getElementById('reserve');
     popupRes.classList = 'popup-reservation-wraper';
     const text = document.createElement('p');
@@ -30,7 +30,7 @@ const trying = (image, info)  => {
 }
 
 
-export default  test; 
-export { trying };
+export default  reservationPopup; 
+export { displayPopup };
 
  
