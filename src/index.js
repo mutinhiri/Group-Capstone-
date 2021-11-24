@@ -37,7 +37,5 @@ const getActorsData = async () => {
 };
 
 getActorsData().then((list) => {
-  for (let i = 0; i < 6; i += 1) {
-    list.forEach((actor) => createCard(actor));
-  }
+    list.splice(-6).forEach((actor) => createCard(actor));
 });
