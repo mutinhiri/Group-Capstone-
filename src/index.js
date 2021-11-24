@@ -14,13 +14,13 @@ function createCard(actor) {
 
   mainSection.appendChild(card);
 
-  const commentsButton = document.getElementById(`comments-button-${actor.id}`);
-  commentsButton.addEventListener('click', () => {
+  const comments = document.getElementById(`comments-button-${actor.id}`);
+  comments.addEventListener('click', () => {
     // Comments
   });
 
-  const reservationsButton = document.getElementById(`reservations-button-${actor.id}`);
-  reservationsButton.addEventListener('click', () => {
+  const reservations = document.getElementById(`reservations-button-${actor.id}`);
+  reservations.addEventListener('click', () => {
     // Reservations
   });
 }
@@ -33,7 +33,7 @@ const getActorsData = async () => {
 };
 
 getActorsData().then((list) => {
-  for (let i = 0; i <6; i++){
+  for (let i = 0; i < 6; i++){
     list.forEach((actor) => createCard(actor));
   }
 });
