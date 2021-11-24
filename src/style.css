@@ -1,5 +1,7 @@
 body {
-  background-color: whitesmoke;
+  background-color: blue;
 }
 
-
+.card-image-container {
+  display: none;
+}
