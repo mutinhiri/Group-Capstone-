@@ -2,7 +2,7 @@ body {
   background-color: white;
 }
 
-.main-page{
+.main-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
