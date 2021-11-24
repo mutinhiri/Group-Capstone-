@@ -17,16 +17,24 @@ const reservationPopup = () => {
 const displayPopup = (image, info)  => {
     const popupRes = document.getElementById('reserve');
     popupRes.classList = 'popup-reservation-wraper';
+    document.getElementById("reserve").style.display="block"; 
     const text = document.createElement('p');
     const img = document.createElement('img');
     img.setAttribute("alt", "preview")
     img.setAttribute("src", `${image}`);
     popupRes.innerHTML = `
-    
+    <a id="close">X</a>
     <h1>${info}</h1>
     `
+    const anchor =  document.getElementById('close');
     popupRes.appendChild(img);
     popupRes.appendChild(text);
+
+    anchor.addEventListener('click',  () => {
+    popupRes.style.display = 'none';
+    }
+
+    )
 }
 
 
