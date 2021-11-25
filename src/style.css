@@ -2,7 +2,6 @@ body {
   background-color: white;
 }
 
-
 .main-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,41 +10,56 @@ body {
 }
 
 #reserve {
-  /* width: 80%;
-  height: 80%; */
-  background-color: rgb(243, 238, 197); 
-  /* display: flex; */
+  background-color: rgb(243, 238, 197);
   align-items: center;
-  /* flex-direction: column; */
-  /* position:fixed; */
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  /* display: grid; */
-  /* grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr; */
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 50%;
+  display: grid;
 }
 
-#close { 
-  position:absolute;
-  top:5px;
-  right:5px;
+.image {
+  margin-left: 14rem;
+  margin-right: 12rem;
+}
+
+.rating {
+  margin: 2px;
+  text-align: center;
+}
+
+#close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
-  /* grid-area: close; */
 }
 
 .reservations-form {
-  /* grid-area: form form form-header form form; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-.form-header {
-  /* grid-area: form-header; */
+.data-list {
+  list-style: none;
+  text-align: center;
 }
 
-.name {
-  /* grid-area: name; */
+.resText {
+  text-align: center;
 }
 
+#reserve h1 {
+  text-align: center;
+}
 
-
+.submit {
+  background-color: black;
+  color: white;
+}
