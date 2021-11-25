@@ -3,6 +3,17 @@ import fillPopUp from './comments.js';
 
 const mainSection = document.getElementById('main-page');
 
+const postLikes = async (body) => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nNqRZVTd1eG2Ykrumvl8/likes/';
+  await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+};
+
 function createCard(actor) {
   const card = document.createElement('div');
   card.classList = 'main-section-card';
@@ -32,19 +43,19 @@ function createCard(actor) {
   const likeButton = document.getElementById(`like-button${actor.id}`);
   likeButton.addEventListener('click', () => {
     const body = {
-      item_id: String(actor.id)
+      item_id: String(actor.id),
     };
 
     postLikes(body);
     const counter = document.getElementById(`like-${actor.id}`);
     const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
-    counter.innerHTML = `likes: ${likes + 1}`
-  })
+    counter.innerHTML = `likes: ${likes + 1}`;
+  });
 }
 
-function actorCounter(list){
-  const counter = document.getElementById('actor-count')
-  counter.innerHTML = `Actor Count (${list.splice(-6).length})`
+function actorCounter(list) {
+  const counter = document.getElementById('actor-count');
+  counter.innerHTML = `Actor Count (${list.splice(-6).length})`;
 }
 
 const getActorsData = async () => {
@@ -62,19 +73,8 @@ const getLikes = async () => {
   return response.json();
 };
 
-const postLikes = async (body) => {
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nNqRZVTd1eG2Ykrumvl8/likes/`;
-  await fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(body),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-};
-
 getActorsData().then((list) => {
-  actorCounter(list)
+  actorCounter(list);
   list.splice(-6).forEach((actor) => createCard(actor));
 });
 
@@ -82,8 +82,8 @@ getLikes().then((likes) => {
   likes.forEach((item) => {
     const counter = document.getElementById(`like-${item.item_id}`);
     if (counter) {
-      const likeNum = `likes: ${item.likes}`
-      counter.innerHTML = likeNum
+      const likeNum = `likes: ${item.likes}`;
+      counter.innerHTML = likeNum;
     }
   });
 });
