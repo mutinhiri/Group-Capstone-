@@ -12,6 +12,7 @@ function createCard(actor) {
       <img class="card-image" src="${actor.image.medium}" alt="">
     </div>
     <h2 class="card-title">${actor.name}</h2>
+    <p id="like-${actor.id}">Likes: 0</p>
     <button id="comments-button-${actor.id}" class="comments">Comments</button>
     <button id="reservations-button-${actor.id}" class="reservations">Reservations</button>
   `;
