@@ -40,11 +40,16 @@ const getActorsData = async () => {
 
 getActorsData().then((list) => {
     list.splice(-6).forEach((actor) => createCard(actor));
+
+    getLikes().then((likes) => {
+      likes.forEach((e) => {
+        const counter = document.getElementById(`like${e.item_id}`);
+        if (counter){
+          counter.innerHTML =  `Likes: ${e.likes}`;
+        }
+      })
+    })
+    
 });
 
-getLikes().then((likes) => {
-  likes.forEach((e) => {
-    const counter = document.getElementById(`like${e.item_id}`)
-  })
-})
 
