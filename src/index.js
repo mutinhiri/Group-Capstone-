@@ -39,7 +39,9 @@ const getActorsData = async () => {
 };
 
 const getLikes = async () => {
-  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/t1qIqN69TPkneT6CvR3N/likes/'
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/t1qIqN69TPkneT6CvR3N/likes/';
+  const response = await fetch(url)
+  return response.json()
 }
 
 getActorsData().then((list) => {
