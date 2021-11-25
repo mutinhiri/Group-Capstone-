@@ -1,15 +1,27 @@
 body {
-  background-color: whitesmoke;
+  background-color: white;
+}
+
+
+.main-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
 }
 
 #reserve {
-  width: 80%;
-  height: 80%;
-  background-color: white; 
-  display: flex;
+  /* width: 80%;
+  height: 80%; */
+  background-color: rgb(243, 238, 197); 
+  /* display: flex; */
   align-items: center;
   flex-direction: column;
-  position:relative;
+  /* position:fixed; */
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #close { 

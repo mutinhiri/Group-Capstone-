@@ -1,18 +1,20 @@
-const reservationPopup = () => {
-    const Btn = document.getElementById('btn');
-    Btn.addEventListener('click', () => {
 
-        const getShows = async () => {
-          const Url = 'https://api.tvmaze.com/singlesearch/shows?q=friends';
-          const response = await fetch(Url, { method: 'GET' });
-          const show = await response.json();
-          return show;
-        };
-        getShows().then((show) => {
-          displayPopup(show.image.medium, show.rating.average);
-        });
-    } 
-    )};
+
+// const reservationPopup = () => {
+//     const Btn = document.getElementById('btn');
+//     Btn.addEventListener('click', () => {
+
+//         const getShows = async () => {
+//           const Url = 'https://api.tvmaze.com/singlesearch/shows?q=friends';
+//           const response = await fetch(Url, { method: 'GET' });
+//           const show = await response.json();
+//           return show;
+//         };
+//         getShows().then((show) => {
+//           displayPopup(show.image.medium, show.rating.average);
+//         });
+//     } 
+//     )};
 
 const displayPopup = (image, info)  => {
     const popupRes = document.getElementById('reserve');
@@ -30,6 +32,7 @@ const displayPopup = (image, info)  => {
     popupRes.appendChild(img);
     popupRes.appendChild(text);
 
+
     anchor.addEventListener('click',  () => {
     popupRes.style.display = 'none';
     }
@@ -38,7 +41,14 @@ const displayPopup = (image, info)  => {
 }
 
 
-export default  reservationPopup; 
+
+
+
+
+
+
+// export default  reservationPopup; 
 export { displayPopup };
+// export default getShows;
 
  
