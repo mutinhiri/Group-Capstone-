@@ -5,7 +5,6 @@ import { displayPopup } from './reservations.js';
 // reservationPopup();
 import fillPopUp from './comments.js';
 
-
 const mainSection = document.getElementById('main-page');
 
 function createCard(actor) {
@@ -24,7 +23,6 @@ function createCard(actor) {
 
   const comments = document.getElementById(`comments-button-${actor.id}`);
   comments.addEventListener('click', () => {
-    // Comments
   fillPopUp(actor.image.medium, actor.summary);
   });
 
