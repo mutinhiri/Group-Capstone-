@@ -38,6 +38,10 @@ const getActorsData = async () => {
   return response.json();
 };
 
+const getLikes = async () => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/t1qIqN69TPkneT6CvR3N/likes/'
+}
+
 getActorsData().then((list) => {
     list.splice(-6).forEach((actor) => createCard(actor));
 
