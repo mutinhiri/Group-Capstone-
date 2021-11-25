@@ -10,6 +10,27 @@ body {
   margin-top: 50px;
 }
 
+#reserve {
+  background-color: rgb(243, 238, 197);
+
+  /* display: flex; */
+  align-items: center;
+  flex-direction: column;
+
+  /* position:fixed; */
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
 #toogle {
   position: fixed;
   text-decoration: none;
