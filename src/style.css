@@ -2,7 +2,6 @@ body {
   background-color: white;
 }
 
-
 .main-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -13,10 +12,12 @@ body {
 #reserve {
   /* width: 80%;
   height: 80%; */
-  background-color: rgb(243, 238, 197); 
+  background-color: rgb(243, 238, 197);
+
   /* display: flex; */
   align-items: center;
   flex-direction: column;
+
   /* position:fixed; */
   margin-left: 10%;
   margin-right: 10%;
@@ -24,12 +25,9 @@ body {
   margin-bottom: 10%;
 }
 
-#close { 
-  position:absolute;
-  top:5px;
-  right:5px;
+#close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
 }
-
-
-

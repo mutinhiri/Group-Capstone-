@@ -1,6 +1,6 @@
 import './style.css';
 // import reservationPopup from './reservations';
-import { displayPopup } from './reservations';
+import { displayPopup } from './reservations.js';
 // import getShows from './reservations';
 // reservationPopup();
 
@@ -27,7 +27,7 @@ function createCard(actor) {
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
   reservations.addEventListener('click', () => {
-        displayPopup(actor.image.medium, actor.rating.average);
+    displayPopup(actor.image.medium, actor.rating.average);
     // Reservations
   });
 }
@@ -42,6 +42,5 @@ const getActorsData = async () => {
 };
 
 getActorsData().then((list) => {
-    list.splice(-6).forEach((actor) => createCard(actor));
+  list.splice(-6).forEach((actor) => createCard(actor));
 });
-
