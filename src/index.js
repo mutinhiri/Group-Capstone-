@@ -42,6 +42,11 @@ function createCard(actor) {
   })
 }
 
+function actorCounter(list){
+  const counter = document.getElementById('actor-count')
+  counter.innerHTML = `Actor Count (${list.length})`
+}
+
 const getActorsData = async () => {
   // const url = 'https://api.tvmaze.com/people?page=4'
   const url = 'https://api.tvmaze.com/shows';
@@ -69,6 +74,7 @@ const postLikes = async (body) => {
 };
 
 getActorsData().then((list) => {
+  actorCounter(list)
   list.splice(-6).forEach((actor) => createCard(actor));
 
   getLikes().then((likes) => {
