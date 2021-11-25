@@ -16,12 +16,15 @@ body {
   background-color: rgb(243, 238, 197); 
   /* display: flex; */
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* position:fixed; */
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 10%;
   margin-bottom: 10%;
+  /* display: grid; */
+  /* grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr; */
 }
 
 #close { 
@@ -29,6 +32,19 @@ body {
   top:5px;
   right:5px;
   cursor: pointer;
+  /* grid-area: close; */
+}
+
+.reservations-form {
+  /* grid-area: form form form-header form form; */
+}
+
+.form-header {
+  /* grid-area: form-header; */
+}
+
+.name {
+  /* grid-area: name; */
 }
 
 

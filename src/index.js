@@ -1,6 +1,6 @@
 import './style.css';
 // import reservationPopup from './reservations';
-import { displayPopup } from './reservations';
+import  displayPopup  from './reservations';
 // import getShows from './reservations';
 // reservationPopup();
 

@@ -29,12 +29,33 @@ const displayPopup = (image, info) => {
   const anchor = document.getElementById('close');
   popupRes.appendChild(img);
   popupRes.appendChild(text);
+  popupRes.appendChild(addReservations);
+
 
   anchor.addEventListener('click', () => {
     popupRes.style.display = 'none';
   });
 };
 
+
+// reserve Blueray
+const API = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/O9fOGSf4v54LBte7f7eY/reservations/';
+
+const submitReservation = async (actorId, name, startDate, endDate) => {
+  const client = { item_id: actorId, 
+  username: name,
+  date_start: startDate,
+  date_end: endDate
+  };
+
+  await fetch(API, {
+    method: 'POST',
+    body: JSON.stringify(client),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+};
 
 
 // Form reservation
@@ -60,6 +81,7 @@ submit.classList.add('submit');
 submit.textContent = 'Reserve';
 submit.type ='submit';
 
+
 addReservations.appendChild(formHeader);
 addReservations.appendChild(name);
 addReservations.appendChild(startDate);
@@ -69,5 +91,5 @@ addReservations.appendChild(submit);
 
 
 // export default  reservationPopup;
-// export default displayPopup;
+export default displayPopup;
 // export default getShows;
