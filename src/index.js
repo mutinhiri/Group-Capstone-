@@ -1,7 +1,6 @@
 import './style.css';
 import fillPopUp from './comments.js';
 
-
 const mainSection = document.getElementById('main-page');
 
 function createCard(actor) {
@@ -21,7 +20,7 @@ function createCard(actor) {
 
   const comments = document.getElementById(`comments-button-${actor.id}`);
   comments.addEventListener('click', () => {
-  fillPopUp(actor.image.medium, actor.summary);
+    fillPopUp(actor.image.medium, actor.summary);
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
@@ -41,21 +40,19 @@ const getActorsData = async () => {
 
 const getLikes = async () => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/t1qIqN69TPkneT6CvR3N/likes/';
-  const response = await fetch(url)
-  return response.json()
-}
+  const response = await fetch(url);
+  return response.json();
+};
 
 getActorsData().then((list) => {
-    list.splice(-6).forEach((actor) => createCard(actor));
+  list.splice(-6).forEach((actor) => createCard(actor));
 
-    getLikes().then((likes) => {
-      likes.forEach((e) => {
-        const counter = document.getElementById(`like${e.item_id}`);
-        if (counter){
-          counter.innerHTML =  `Likes: ${e.likes}`;
-        }
-      })
-    })
+  getLikes().then((likes) => {
+    likes.forEach((e) => {
+      const counter = document.getElementById(`like${e.item_id}`);
+      if (counter) {
+        counter.innerHTML = `Likes: ${e.likes}`;
+      }
+    });
+  });
 });
-
-
