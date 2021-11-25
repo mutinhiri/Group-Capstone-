@@ -81,7 +81,8 @@ getActorsData().then((list) => {
     likes.forEach((e) => {
       const counter = document.getElementById(`like${e.item_id}`);
       if (counter) {
-        counter.innerHTML = `Likes: ${e.likes}`;
+        const likeNum = `likes: ${e.lilkes}`
+        counter.innerHTML = likeNum
       }
     });
   });
