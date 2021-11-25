@@ -49,7 +49,6 @@ getActorsData().then((list) => {
         }
       })
     })
-    
 });
 
 
