@@ -12,7 +12,7 @@ function createCard(actor) {
     </div>
     <h2 class="card-title">${actor.name}</h2>
     <p id="like-${actor.id}">Likes: 0</p>
-    <button>&#10084</button>
+    <button id="like-button${actor.id}">&#10084</button>
     <button id="comments-button-${actor.id}" class="comments">Comments</button>
     <button id="reservations-button-${actor.id}" class="reservations">Reservations</button>
   `;
@@ -28,6 +28,18 @@ function createCard(actor) {
   reservations.addEventListener('click', () => {
     // Reservations
   });
+
+  const likeButton = document.getElementById(`like-button${actor.id}`);
+  likeButton.addEventListener('click', () => {
+    const body = {
+      item_id: String(actor.id)
+    };
+
+    postLikes(body);
+    const counter = document.getElementById(`like-${actor.id}`);
+    const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
+    counter.innerHTML = `Likes: ${likes + 1}`
+  })
 }
 
 const getActorsData = async () => {
@@ -40,9 +52,20 @@ const getActorsData = async () => {
 };
 
 const getLikes = async () => {
-  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/t1qIqN69TPkneT6CvR3N/likes/';
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nNqRZVTd1eG2Ykrumvl8/likes/';
   const response = await fetch(url);
   return response.json();
+};
+
+const postLikes = async (body) => {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nNqRZVTd1eG2Ykrumvl8/likes/`;
+  await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 };
 
 getActorsData().then((list) => {
