@@ -23,7 +23,7 @@ function createCard(actor) {
 
   const comments = document.getElementById(`comments-button-${actor.id}`);
   comments.addEventListener('click', () => {
-  fillPopUp(actor.image.medium, actor.summary);
+    fillPopUp(actor.image.medium, actor.summary);
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);

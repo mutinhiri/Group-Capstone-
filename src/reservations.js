@@ -13,7 +13,7 @@
 //         });
 //     }
 //     )};
-
+/* eslint-disable */
 const displayPopup = (image, info) => {
   const popupRes = document.getElementById('reserve');
   popupRes.classList = 'popup-reservation-wraper';
