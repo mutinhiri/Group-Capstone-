@@ -11,7 +11,7 @@ function createCard(actor) {
       <img class="card-image" src="${actor.image.medium}" alt="">
     </div>
     <h2 class="card-title">${actor.name}</h2>
-    <p id="like-${actor.id}">Likes: 0</p>
+    <p id="like-${actor.id}">n 9</p>
     <button id="like-button${actor.id}">&#10084</button>
     <button id="comments-button-${actor.id}" class="comments">Comments</button>
     <button id="reservations-button-${actor.id}" class="reservations">Reservations</button>
@@ -38,7 +38,7 @@ function createCard(actor) {
     postLikes(body);
     const counter = document.getElementById(`like-${actor.id}`);
     const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
-    counter.innerHTML = `Likes: ${likes + 1}`
+    counter.innerHTML = `likes: ${likes + 1}`
   })
 }
 
@@ -76,14 +76,14 @@ const postLikes = async (body) => {
 getActorsData().then((list) => {
   actorCounter(list)
   list.splice(-6).forEach((actor) => createCard(actor));
+});
 
-  getLikes().then((likes) => {
-    likes.forEach((e) => {
-      const counter = document.getElementById(`like${e.item_id}`);
-      if (counter) {
-        const likeNum = `likes: ${e.lilkes}`
-        counter.innerHTML = likeNum
-      }
-    });
+getLikes().then((likes) => {
+  likes.forEach((item) => {
+    const counter = document.getElementById(`like-${item.item_id}`);
+    if (counter) {
+      const likeNum = `likess: ${item.likes}`
+      counter.innerHTML = likeNum
+    }
   });
 });
