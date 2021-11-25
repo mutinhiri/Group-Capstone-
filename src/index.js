@@ -42,6 +42,7 @@ function createCard(actor) {
 
   const likeButton = document.getElementById(`like-button${actor.id}`);
   likeButton.addEventListener('click', () => {
+
     const body = {
       item_id: String(actor.id),
     };
