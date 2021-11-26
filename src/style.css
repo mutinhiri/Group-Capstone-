@@ -10,7 +10,7 @@ body {
 }
 
 #reserve {
-  background-color: rgb(243, 238, 197);
+  background-color: rgba(218, 215, 188, 0.986);
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -20,6 +20,7 @@ body {
   z-index: 1;
   width: 50%;
   display: grid;
+  overflow-y: scroll;
 }
 
 .image {
@@ -37,18 +38,15 @@ body {
   top: 5px;
   right: 5px;
   cursor: pointer;
-}
-
-.reservations-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  height: 15px;
 }
 
 .data-list {
   list-style: none;
   text-align: center;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resText {
@@ -59,7 +57,41 @@ body {
   text-align: center;
 }
 
-.submit {
-  background-color: black;
-  color: white;
+#input-name {
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+#input-datestart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+#input-dateend {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+#reserve-count {
+  text-align: center;;
+}
+
+#submit-btn {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(121, 21, 21);
+    color: white;
+}
+
+#img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto
 }

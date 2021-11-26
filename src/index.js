@@ -26,14 +26,15 @@ function createCard(actor) {
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
-  reservations.addEventListener('click', () => {
-        displayPopup(actor.image.medium, actor.rating.average);
+  reservations.addEventListener('click', (e) => {
+        displayPopup(actor.image.medium, actor.rating.average, e.target.id.split('-')[2]);
+        console.log(e.target.id);
+
     // Reservations
   });
 }
 
 const getActorsData = async () => {
-  // const url = 'https://api.tvmaze.com/people?page=1'
   const url = 'https://api.tvmaze.com/shows';
 
   const response = await fetch(url, {
