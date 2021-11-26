@@ -21,15 +21,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 50%;
+  /* width: 50%; */
   display: grid;
-  overflow-y: scroll;
+  overflow-y: auto;
+  height: 70%;
 }
-
+/* 
 .image {
   margin-left: 14rem;
   margin-right: 12rem;
-}
+
+} */
 
 .rating {
   margin: 2px;
@@ -97,6 +99,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 

@@ -16,8 +16,11 @@ const getReservations = async (id) => {
   if (reservations.error) {
     reservations = [];
   }
+  console.log(reservations);
+
   return reservations;
 };
+
 
 const displayReservations = (test) => {
   const section = document.createElement('section');
@@ -38,7 +41,7 @@ const displayReservations = (test) => {
   document.getElementById('reserve-count').innerHTML = counterReserv;
 };
 
-const displayPopup = (image, info, id) => {
+export const displayPopup = (image, info, id) => {
   const ul = document.createElement('ul');
   ul.classList.add('data-list');
   const popupRes = document.getElementById('reserve');
@@ -87,10 +90,8 @@ const displayPopup = (image, info, id) => {
     });
   }, 1000);
 };
-
-const counterReservations = (reservations) => {
+  
+export const counterReservations = (reservations) => {
   const result = reservations ? `Reservations(${reservations.length})` : 'Reservations (0)';
   return result;
 };
-
-export default displayPopup;

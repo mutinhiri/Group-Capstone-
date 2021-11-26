@@ -1,12 +1,13 @@
 import './style.css';
-// import reservationPopup from './reservations';
-import displayPopup from './reservations.js';
+import { displayPopup } from './reservations.js';
+
 
 
 fillPopUp();
 
 // import getShows from './reservations';
 // reservationPopup();
+
 import fillPopUp from './comments.js';
 import actorCounter from './actorCounter.js';
 

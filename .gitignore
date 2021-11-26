@@ -1,6 +1,7 @@
 
+node_modules/
+.package-lock.json
 .test.md
-node_modules
  .vscode
 
 
