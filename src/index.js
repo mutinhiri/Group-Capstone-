@@ -4,7 +4,7 @@ import { displayPopup } from './reservations.js';
 // import getShows from './reservations';
 // reservationPopup();
 import fillPopUp from './comments.js';
-import actorCounter from './actorCounter';
+import actorCounter from './actorCounter.js';
 
 const mainSection = document.getElementById('main-page');
 
