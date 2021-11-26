@@ -1,6 +1,7 @@
 import './style.css';
 import fillPopUp from './comments.js';
 
+fillPopUp();
 
 const mainSection = document.getElementById('main-page');
 
@@ -19,8 +20,9 @@ function createCard(actor) {
   mainSection.appendChild(card);
 
   const comments = document.getElementById(`comments-button-${actor.id}`);
-  comments.addEventListener('click', () => {
-  fillPopUp(actor.image.medium, actor.summary);
+  comments.addEventListener('click', (e) => {
+    fillPopUp(actor.image.medium, actor.summary, actor.name, e.target.id.split('-')[2]);
+    console.log(e.target.id.split('-')[2])
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
@@ -39,8 +41,5 @@ const getActorsData = async () => {
 };
 
 getActorsData().then((list) => {
-    list.splice(-6).forEach((actor) => createCard(actor));
-
-
+  list.splice(-6).forEach((actor) => createCard(actor));
 });
-
