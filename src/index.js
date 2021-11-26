@@ -1,9 +1,6 @@
 import './style.css';
-// import reservationPopup from './reservations';
-import displayPopup from './reservations.js';
+import { displayPopup } from './reservations.js';
 
-// import getShows from './reservations';
-// reservationPopup();
 import fillPopUp from './comments.js';
 
 const mainSection = document.getElementById('main-page');
@@ -30,8 +27,6 @@ function createCard(actor) {
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
   reservations.addEventListener('click', (e) => {
     displayPopup(actor.image.medium, actor.rating.average, e.target.id.split('-')[2]);
-
-
     // Reservations
   });
 }
