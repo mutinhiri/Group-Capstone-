@@ -57,7 +57,7 @@ const createCard = (actor) => {
     const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
     counter.innerHTML = `likes: ${likes + 1}`;
   });
-}
+};
 
 const getActorsData = async () => {
   const url = 'https://api.tvmaze.com/shows';

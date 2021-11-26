@@ -52,7 +52,6 @@ const fillPopUp = (show, sum, id) => {
 <div id="comments">
    </div>
 <div class="inner">
-<p id="error"></p>
 <h4>Add a comment</h4>
 <input type="text"  id="input-text" required>
 <textarea  id="input-area" cols="21" rows="2" required></textarea>
@@ -64,27 +63,25 @@ const fillPopUp = (show, sum, id) => {
   const commentBtn = document.getElementById('btn-comment');
 
   commentBtn.addEventListener('click', () => {
-    if ( name.value === "" || commentText.value === "") {
-      const error = document.getElementById(error);
-      error.innerHTML = 'Value missing';
+    if (name.validity.valueMissing || commentText.validity.valueMissing) {
+      name.setCustomValidity('PLease Enter Text!');
     } else {
-    const body = {
-      item_id: id,
-      username: name.value,
-      comment: commentText.value,
-    };
-    postStrange(body);
-    setTimeout(() => {
-      getComments(id).then((com) => {
-        populateList(com);
-      });
-    }, 1000);
+      const body = {
+        item_id: id,
+        username: name.value,
+        comment: commentText.value,
+      };
+      postStrange(body);
+      setTimeout(() => {
+        getComments(id).then((com) => {
+          populateList(com);
+        });
+      }, 1000);
 
-    name.value = '';
-    commentText.value = '';
-  }
-    });
-
+      name.value = '';
+      commentText.value = '';
+    }
+  });
   const toogle = document.getElementById('toogle');
 
   toogle.addEventListener('click', () => {
@@ -95,7 +92,6 @@ const fillPopUp = (show, sum, id) => {
       populateList(com);
     });
   }, 1000);
-
 };
 
 export default fillPopUp;
