@@ -1,5 +1,5 @@
 # Screenshot
-[screenshot](/src/img/groupCapstone.png) 
+[screenshot](\src\groupCapstone.png) 
 
 # Group Capstone 
 
