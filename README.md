@@ -46,13 +46,13 @@ To get a local copy up and running follow these simple example steps.
 
 # Amel
   -Github: [Amel](https://github.com/)
-  -Twitter
-  -LinkedIn
+  -Twitter[@Amal Qahwadji](https://twitter.com/AmalQahwadji)
+  -LinkedIn[Amel Khiri](https://www.linkedin.com/in/amel-khiri-qahwadji-37a550135/)
 
 
 #  Anibal
-  -Github[Anibal](https://github.com)
-
+  -Github[Anibal Amoroso](https://github.com/sj1978)
+  -Twitter[@AmorosoAnibal](https://twitter.com/AmorosoAnibal)
 
 
 # Contributing
