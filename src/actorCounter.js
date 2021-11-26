@@ -3,4 +3,4 @@ function actorCounter(list) {
   counter.innerHTML = `Actor Count (${list.splice(-6).length})`;
 }
 
-module.exports = actorCounter
+module.exports = actorCounter;
