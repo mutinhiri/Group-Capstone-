@@ -39,6 +39,7 @@
     "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
+
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "babel-jest": "^27.3.1",
