@@ -16,11 +16,8 @@ const getReservations = async (id) => {
   if (reservations.error) {
     reservations = [];
   }
-  console.log(reservations);
-
   return reservations;
 };
-
 
 const displayReservations = (test) => {
   const section = document.createElement('section');
@@ -90,7 +87,7 @@ export const displayPopup = (image, info, id) => {
     });
   }, 1000);
 };
-  
+
 export const counterReservations = (reservations) => {
   const result = reservations ? `Reservations(${reservations.length})` : 'Reservations (0)';
   return result;
