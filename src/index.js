@@ -1,6 +1,7 @@
 import './style.css';
 // import reservationPopup from './reservations';
-import { displayPopup } from './reservations.js';
+import displayPopup from './reservations.js';
+
 // import getShows from './reservations';
 // reservationPopup();
 import fillPopUp from './comments.js';
@@ -41,8 +42,9 @@ function createCard(actor) {
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
-  reservations.addEventListener('click', () => {
-    displayPopup(actor.image.medium, actor.rating.average);
+  reservations.addEventListener('click', (e) => {
+    displayPopup(actor.image.medium, actor.rating.average, e.target.id.split('-')[2]);
+
     // Reservations
   });
 
@@ -60,8 +62,6 @@ function createCard(actor) {
 }
 
 const getActorsData = async () => {
-  // const url = 'https://api.tvmaze.com/people?page=1'
-  // const url = 'https://api.tvmaze.com/people?page=4'
   const url = 'https://api.tvmaze.com/shows';
 
   const response = await fetch(url, {
