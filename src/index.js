@@ -4,6 +4,7 @@ import { displayPopup } from './reservations.js';
 // import getShows from './reservations';
 // reservationPopup();
 import fillPopUp from './comments.js';
+import actorCounter from './actorCounter';
 
 const mainSection = document.getElementById('main-page');
 
@@ -57,11 +58,6 @@ function createCard(actor) {
     const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
     counter.innerHTML = `likes: ${likes + 1}`;
   });
-}
-
-function actorCounter(list) {
-  const counter = document.getElementById('actor-count');
-  counter.innerHTML = `Actor Count (${list.splice(-6).length})`;
 }
 
 const getActorsData = async () => {
