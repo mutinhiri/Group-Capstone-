@@ -31,13 +31,11 @@ function createCard(actor) {
   reservations.addEventListener('click', (e) => {
     displayPopup(actor.image.medium, actor.rating.average, e.target.id.split('-')[2]);
 
-
     // Reservations
   });
 }
 
 const getActorsData = async () => {
-
   const url = 'https://api.tvmaze.com/shows';
 
   const response = await fetch(url, {
