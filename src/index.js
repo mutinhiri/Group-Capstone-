@@ -2,12 +2,6 @@ import './style.css';
 import { displayPopup } from './reservations.js';
 
 
-
-fillPopUp();
-
-// import getShows from './reservations';
-// reservationPopup();
-
 import fillPopUp from './comments.js';
 import actorCounter from './actorCounter.js';
 
@@ -85,7 +79,7 @@ const getLikes = async () => {
 
 getActorsData().then((list) => {
   actorCounter(list);
-  list.splice(-6).forEach((actor) => createCard(actor));
+  list.splice(-30).forEach((actor) => createCard(actor));
 });
 
 getLikes().then((likes) => {
