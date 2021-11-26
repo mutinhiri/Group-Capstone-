@@ -12,7 +12,7 @@ If you like what you see and have a project you need coded, don't hesitate to co
 
 
 # Screenshot
-[](src/groupCapstone.png) 
+![](src/groupCapstone.png) 
 
 [video presentation](https://drive.google.com/file/d/19XV32Kyiy6z-5QU6gO0r5RLOhZt1G9ZI/view?usp=sharing)
 
