@@ -1,5 +1,5 @@
 # Screenshot
-[screenshot](.\src\groupCapstone.png) 
+[screenshot](src/groupCapstone.png) 
 
 [video presentation](https://drive.google.com/file/d/19XV32Kyiy6z-5QU6gO0r5RLOhZt1G9ZI/view?usp=sharing
 )
