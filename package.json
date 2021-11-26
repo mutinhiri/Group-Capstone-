@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/mutinhiri/Group-Capstone-#readme",
   "devDependencies": {
+
     "@babel/preset-env": "^7.16.4",
+
+    "babel-cli": "^6.26.0",
+
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
@@ -44,5 +48,11 @@
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0"
+
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.3.1",
+    "jsdom": "^18.1.1"
+
   }
 }
