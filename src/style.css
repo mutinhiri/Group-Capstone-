@@ -10,6 +10,8 @@ body {
   margin-top: 50px;
 }
 
+
+
 #reserve {
   background-color: rgba(218, 215, 188, 0.986);
   align-items: center;
@@ -97,16 +99,77 @@ body {
   margin-right: auto;
 }
 
+
 #toogle {
   position: fixed;
+  right: 52vh;
   text-decoration: none;
   color: black;
   font-weight: bolder;
+  font-size: 20px;
 }
 
 #modal {
-  width: 800px;
-  background-color: gray;
-  opacity: 0.8;
-  height: 550px;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 600px;
+  align-items: center;
+  padding: 10px 40px;
+  background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+  background-blend-mode: multiply, multiply;
+  border-radius: 20px;
+  margin: 0 50px;
+}
+
+.show-img {
+  height: 130px;
+  margin: 0 250px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal {
+  color: rgb(43, 46, 43);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+#input-text {
+  margin: 15px 0;
+}
+
+#comments {
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+#btn-comment {
+  margin: 20px 0;
+  height: 30px;
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+}
+
+#btn-comment:hover {
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+}
+.modal {
+  height: 100px;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
 }

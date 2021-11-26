@@ -2,10 +2,14 @@ import './style.css';
 // import reservationPopup from './reservations';
 import displayPopup from './reservations.js';
 
+
+fillPopUp();
+
 // import getShows from './reservations';
 // reservationPopup();
 import fillPopUp from './comments.js';
 import actorCounter from './actorCounter.js';
+
 
 const mainSection = document.getElementById('main-page');
 
@@ -37,8 +41,10 @@ function createCard(actor) {
   mainSection.appendChild(card);
 
   const comments = document.getElementById(`comments-button-${actor.id}`);
-  comments.addEventListener('click', () => {
-    fillPopUp(actor.image.medium, actor.summary);
+
+  comments.addEventListener('click', (e) => {
+    fillPopUp(actor.image.medium, actor.summary, actor.name, e.target.id.split('-')[2]);
+    
   });
 
   const reservations = document.getElementById(`reservations-button-${actor.id}`);
@@ -69,6 +75,7 @@ const getActorsData = async () => {
   return response.json();
 };
 
+
 const getLikes = async () => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/nNqRZVTd1eG2Ykrumvl8/likes/';
   const response = await fetch(url);
@@ -89,3 +96,4 @@ getLikes().then((likes) => {
     }
   });
 });
+
