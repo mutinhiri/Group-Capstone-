@@ -2,11 +2,11 @@
 
 # Group Capstone 
 
-In this project we worked collaboratively as a Group to implement a web app wich shows information about movie shows 
+In this project we worked collaboratively as a Group to implement a web app wich shows informations about movie shows. 
 
-The app fetches data from the tvmaze Api and users can interactively add likes to their favourite shows 
+The app fetches data from the Tvmaze Api,  and users can interactively add likes to their favourite shows. 
 
-The greatest feature is making reservations and making comments and moreso read other people comments about the movie show 
+The greatest features is making reservations and making comments and more so that we can read other people comments about the movie show. 
 
 If you like what you see and have a project you need coded, don't hesitate to contact us.
 
