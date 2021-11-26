@@ -1,3 +1,6 @@
+# Screenshot
+[screenshot](/src/img/groupCapstone.png) 
+
 # Group Capstone 
 
 In this project we worked collaboratively as a Group to implement a web app wich shows information about movie shows 
