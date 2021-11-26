@@ -45,8 +45,8 @@ body {
   list-style: none;
   text-align: center;
   display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .resText {
@@ -58,10 +58,10 @@ body {
 }
 
 #input-name {
-display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
 }
 
 #input-datestart {
@@ -73,25 +73,25 @@ display: block;
 
 #input-dateend {
   display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
 }
 
 #reserve-count {
-  text-align: center;;
+  text-align: center;
 }
 
 #submit-btn {
   display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(121, 21, 21);
-    color: white;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(121, 21, 21);
+  color: white;
 }
 
 #img {
   display: block;
-    margin-left: auto;
-    margin-right: auto
+  margin-left: auto;
+  margin-right: auto;
 }

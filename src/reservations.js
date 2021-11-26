@@ -1,4 +1,3 @@
-
 const postReservation = async (body) => {
   const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/O9fOGSf4v54LBte7f7eY/reservations/';
   await fetch(apiUrl, {
@@ -29,23 +28,22 @@ const displayReservations = (test) => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
      ${item.username}: ${item.date_start}: ${item.date_end}
-    `
-    console.log(test);
+    `;
+
     section.appendChild(listItem);
     ul.appendChild(section);
-
-  })
+  });
+  /* eslint-disable no-use-before-define */
   const counterReserv = counterReservations(test);
   document.getElementById('reserve-count').innerHTML = counterReserv;
+};
 
-}
-
-const displayPopup = (image, info, id)  => {
+const displayPopup = (image, info, id) => {
   const ul = document.createElement('ul');
   ul.classList.add('data-list');
   const popupRes = document.getElementById('reserve');
   popupRes.classList = 'popup-reservation-wraper';
-  document.getElementById("reserve").style.display="block"; 
+  document.getElementById('reserve').style.display = 'block';
   popupRes.innerHTML = `
   <a id="close">X</a>
   <h1>${info}</h1>
@@ -56,47 +54,43 @@ const displayPopup = (image, info, id)  => {
   <input type="date" id="input-datestart">
   <input type="date" id="input-dateend">
   <button type="button" id="submit-btn">Reserve</button>
-  `
+  `;
 
-  const anchor =  document.getElementById('close');
+  const anchor = document.getElementById('close');
 
-  anchor.addEventListener('click',  () => {
-  popupRes.style.display = 'none';
-  }
-
-  )
+  anchor.addEventListener('click', () => {
+    popupRes.style.display = 'none';
+  });
   const name = document.getElementById('input-name');
   const startDate = document.getElementById('input-datestart');
   const endDate = document.getElementById('input-dateend');
 
-const submit = document.getElementById('submit-btn');
+  const submit = document.getElementById('submit-btn');
   submit.addEventListener('click', (e) => {
-      e.preventDefault();
-      const body = {
-        item_id: id,
-        username: name.value,
-        date_start: startDate.value, 
-        date_end: endDate.value, 
-      };
-      postReservation(body);
-      setTimeout(() => {
-        getReservations(id).then((res) => {
-          displayReservations(res);
-        });
-      }, 1000);
+    e.preventDefault();
+    const body = {
+      item_id: id,
+      username: name.value,
+      date_start: startDate.value,
+      date_end: endDate.value,
+    };
+    postReservation(body);
+    setTimeout(() => {
+      getReservations(id).then((res) => {
+        displayReservations(res);
       });
-      setTimeout(() => {
-        getReservations(id).then((res) => {
-          displayReservations(res);
-        });
-      }, 1000);
-    
-}
+    }, 1000);
+  });
+  setTimeout(() => {
+    getReservations(id).then((res) => {
+      displayReservations(res);
+    });
+  }, 1000);
+};
 
 const counterReservations = (reservations) => {
   const result = reservations ? `Reservations(${reservations.length})` : 'Reservations (0)';
   return result;
 };
-
 
 export default displayPopup;
