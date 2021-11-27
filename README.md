@@ -47,6 +47,7 @@ To get a local copy up and running follow these simple example steps:
 
 
 ### Run tests
+npm  test  ( to run the test created in order to test the funcions with jest) 
 
 Javascript linters
 

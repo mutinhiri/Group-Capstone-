@@ -1,5 +1,6 @@
+import actorCounter from './actorCounter.js';
+
 const jsdom = require('jsdom');
-const actorCounter = require('./actorCounter.js');
 
 const { JSDOM } = jsdom;
 const dom = new JSDOM('<!DOCTYPE html><p id="actor-count">Actor Counter</p>');
