@@ -16,7 +16,7 @@ If you like what you see and have a project you need coded, don't hesitate to co
 
 ##Live Deploy
 
-![](https://mutinhiri.github.io/Group-Capstone-/dist/#)
+https://mutinhiri.github.io/Group-Capstone-/dist/
 
 [video presentation](https://drive.google.com/file/d/19XV32Kyiy6z-5QU6gO0r5RLOhZt1G9ZI/view?usp=sharing)
 
