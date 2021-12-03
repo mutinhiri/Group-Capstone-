@@ -1,3 +1,3 @@
-export default function counterComment(item) {
-  return item.length;
-}
+const counterComment = (item) => item.length;
+
+export default counterComment;

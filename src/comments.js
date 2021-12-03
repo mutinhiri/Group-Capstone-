@@ -63,20 +63,24 @@ const fillPopUp = (show, sum, id) => {
   const commentBtn = document.getElementById('btn-comment');
 
   commentBtn.addEventListener('click', () => {
-    const body = {
-      item_id: id,
-      username: name.value,
-      comment: commentText.value,
-    };
-    postStrange(body);
-    setTimeout(() => {
-      getComments(id).then((com) => {
-        populateList(com);
-      });
-    }, 1000);
+    if (name.validity.valueMissing || commentText.validity.valueMissing) {
+      name.setCustomValidity('PLease Enter Text!');
+    } else {
+      const body = {
+        item_id: id,
+        username: name.value,
+        comment: commentText.value,
+      };
+      postStrange(body);
+      setTimeout(() => {
+        getComments(id).then((com) => {
+          populateList(com);
+        });
+      }, 1000);
 
-    name.value = '';
-    commentText.value = '';
+      name.value = '';
+      commentText.value = '';
+    }
   });
   const toogle = document.getElementById('toogle');
 

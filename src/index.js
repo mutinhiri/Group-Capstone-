@@ -17,7 +17,7 @@ const postLikes = async (body) => {
   });
 };
 
-function createCard(actor) {
+const createCard = (actor) => {
   const card = document.createElement('div');
   card.classList = 'main-section-card';
   card.innerHTML = `
@@ -57,7 +57,7 @@ function createCard(actor) {
     const likes = parseInt(counter.innerHTML.split(' ')[1], 10);
     counter.innerHTML = `likes: ${likes + 1}`;
   });
-}
+};
 
 const getActorsData = async () => {
   const url = 'https://api.tvmaze.com/shows';
@@ -75,7 +75,7 @@ const getLikes = async () => {
 
 getActorsData().then((list) => {
   actorCounter(list);
-  list.splice(-30).forEach((actor) => createCard(actor));
+  list.splice(-27).forEach((actor) => createCard(actor));
 });
 
 getLikes().then((likes) => {
